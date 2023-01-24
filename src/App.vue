@@ -1,10 +1,17 @@
 <template>
-  <main></main>
+  <main>
+
+  </main>
 </template>
 
 <script>
-export default {
+import {getWeatherByLocation} from "@/service/weather.service";
 
+export default {
+    mounted() {
+      getWeatherByLocation("Astana")
+          .then((res)=>console.log(res))
+    }
 }
 </script>
 
