@@ -1,20 +1,32 @@
 <template>
   <main>
-
+    <div class="item">
+      <Search />
+    </div>
   </main>
 </template>
 
 <script>
-import {getWeatherByLocation} from "@/service/weather.service";
+
+import Button from "@/components/UI/Button.vue";
+import Search from "@/components/Search.vue";
 
 export default {
-    mounted() {
-      getWeatherByLocation("Astana")
-          .then((res)=>console.log(res))
-    }
+  components: {Search}
+
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.item{
+  width: 414px;
+  height: 896px;
 
+  border: 1px solid black;
+}
 </style>

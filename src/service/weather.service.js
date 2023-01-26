@@ -6,3 +6,7 @@ export function getWeatherByLocation(location) {
     return axios.get(`${BASE_URL}/current.json?key=${API_KEY}&q=${location}&aqi=no`)
         .then((res)=>res)
 }
+export function getWeatherForecastByLocation(location){
+    return axios.get(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${location}&aqi=no`)
+        .then((res)=>res)
+}
